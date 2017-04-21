@@ -1,0 +1,12 @@
+language: node_js
+sudo: false
+node_js:
+  - 6. 10. 2
+services:
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm test
