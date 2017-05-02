@@ -18,7 +18,7 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.scss$/,
@@ -35,5 +35,6 @@ module.exports = {
         },
 
 plugins: [HtmlWebpackPluginConfig],
+
 
 }
