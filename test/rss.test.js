@@ -20,11 +20,11 @@ describe('Rss Feed Component', () => {
             expect(articles.find('.articlesPanel')).toBe.defined;
         }),
 
-        it('renders filterPanel', () => {
-            const filters = shallow(<RssFeed />);
-            expect(filters.find('.filtersPanel')).toBe.defined;
+        it('renders sortPanel', () => {
+            const sort = shallow(<RssFeed />);
+            expect(sort.find('.sortPanel')).toBe.defined;
         }),
-        
+
         it('renders loginButton', () => {
             const login = shallow(<RssFeed />);
             expect(login.find('.loginButton')).toBe.defined;

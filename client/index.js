@@ -3,6 +3,8 @@
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+import RssFeed from './components/headlinesJs/RssFeed.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<RssFeed />, document.getElementById('root'));

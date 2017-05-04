@@ -5,6 +5,11 @@ exports[`Rss Feed Component snapshot of rssFeed 1`] = `
   className="rssFeed"
 >
   <div
+    className="headerPanel"
+  >
+    <HeaderPanel />
+  </div>
+  <div
     className="sourcesPanel"
   >
     <SourcesPanel />
@@ -15,19 +20,14 @@ exports[`Rss Feed Component snapshot of rssFeed 1`] = `
     <ArticlesPanel />
   </div>
   <div
-    className="filtersPanel"
+    className="sortPanel"
   >
-    <FiltersPanel />
+    <SortPanel />
   </div>
   <div
     className="loginButton"
   >
     <GooglePlusLogin />
-  </div>
-  <div
-    classname="headerPanel"
-  >
-    <HeaderPanel />
   </div>
 </div>
 `;
