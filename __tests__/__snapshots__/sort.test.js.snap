@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sort panel component snapshot of SortPanel 1`] = `
+<div
+  className="radioGroup"
+>
+  <RadioGroup
+    container="div"
+    name="sort"
+    value="opt1"
+  >
+    <Radio
+      className="top"
+      ripple={true}
+      value="opt1"
+    >
+      Top
+    </Radio>
+    <Radio
+      className="latest"
+      ripple={true}
+      value="opt2"
+    >
+      Latest
+    </Radio>
+    <Radio
+      className="popular"
+      ripple={true}
+      value="opt3"
+    >
+      Popular
+    </Radio>
+  </RadioGroup>
+</div>
+`;

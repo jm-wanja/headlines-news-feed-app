@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login button component snapshot of GooglePlusLogin 1`] = `
+<div
+  id="login"
+>
+  <Button
+    accent={true}
+    className="login"
+    raised={true}
+    ripple={true}
+  >
+    GooglePlusLogin
+  </Button>
+</div>
+`;

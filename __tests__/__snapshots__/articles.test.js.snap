@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Articles Panel Component snapshot of ArticlesPanel 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "height": "300px",
+        "position": "relative",
+      }
+    }
+  >
+    <Layout
+      fixedDrawer={true}
+    >
+      <Drawer
+        title="Article"
+      >
+        <Navigation>
+          <div
+            id="loading"
+          >
+            Loading...
+          </div>
+        </Navigation>
+      </Drawer>
+    </Layout>
+  </div>
+</div>
+`;
