@@ -2,7 +2,7 @@ import React from 'react';
 import SourcesPanel from './SourcesPanel.js';
 import ArticlesPanel from './ArticlesPanel.js';
 import SortPanel from './SortPanel.js';
-import GooglePlusLogin from './Loginbutton.js';
+import GooglePlusLogin from './LoginButton.js';
 import HeaderPanel from './HeaderPanel.js'
 
 

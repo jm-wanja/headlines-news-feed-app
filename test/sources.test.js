@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import shallowToJSON from 'enzyme-to-json';
-import SourcesPanel from '../client/components/headlinesJs/sourcesPanel.js';
+import SourcesPanel from '../client/components/headlinesJs/SourcesPanel.js';
 
 describe('Sources Panel Component', () => {
   it('snapshot of SourcePanel', () => {
