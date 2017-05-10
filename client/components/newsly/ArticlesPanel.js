@@ -27,20 +27,14 @@ export default class ArticlesPanel extends React.Component {
         console.log("State", this.state);
         return (
             <div>
-                <div style={{ height: '300px', position: 'relative' }}>
-                    <Layout fixedDrawer>
-                        <Drawer title="Article">
-                            <Navigation>
-                                {this.state.articles.length ? this.state.articles.map((article) => (
-                                    <div id="article" key={article.publishedAt}>
-                                        <a id="articles-link" href={article.url} target="_blank">{article.title}</a>
-                                    </div>
-                                )) :
-                                    <div id="loading">Loading...</div>
-                                }
-                            </Navigation>
-                        </Drawer>
-                    </Layout>
+                <div style={{ marginLeft: 300, paddingTop: 20 }}>
+                    {this.state.articles.length ? this.state.articles.map((article) => (
+                        <div id="article" key={article.publishedAt}>
+                            <a id="articles-link" href={article.url} target="_blank">{article.title}</a>
+                        </div>
+                    )) :
+                        <div id="loading">Loading...</div>
+                    }
                 </div>
             </div>
         );

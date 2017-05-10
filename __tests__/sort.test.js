@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import shallowToJSON from 'enzyme-to-json';
-import SortPanel from '../client/components/newsly/SortPanel.js';
+// import SortPanel from '../client/components/newsly/SortPanel.js';
 
 //test the design of the sort component
 describe('sort panel component', () => {

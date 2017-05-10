@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import shallowToJSON from 'enzyme-to-json';
-import GooglePlusLogin from '../client/components/newsly/LoginButton.js';
+// import GooglePlusLogin from '../client/components/newsly/LoginButton.js';
 
 //test the design of the login component
 describe('login button component', () => {

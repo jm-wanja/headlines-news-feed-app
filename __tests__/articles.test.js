@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import shallowToJSON from 'enzyme-to-json';
-import ArticlesPanel from '../client/components/newsly/ArticlesPanel.js';
+// import ArticlesPanel from '../client/components/newsly/ArticlesPanel.js';
 
 describe('Articles Panel Component', () => {
 

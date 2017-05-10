@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import shallowToJSON from 'enzyme-to-json';
-import SourcesPanel from '../client/components/newsly/SourcesPanel.js';
+// import SourcesPanel from '../client/components/newsly/SourcesPanel.js';
 
 describe('Sources Panel Component', () => {
   //test for the design of the souces panel component

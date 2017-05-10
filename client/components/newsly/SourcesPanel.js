@@ -26,23 +26,17 @@ export default class SourcesPanel extends React.Component {
     render() {
         console.log("State", this.state);
         return (
-            <div>
-                <div style={{ height: '1000px', position: 'relative' }}>
-                    <Layout fixedDrawer>
-                        <Drawer title="SOURCES">
-                            <Navigation>
-                                {this.state.sources.length ? this.state.sources.map((source) => (
-                                    <div id="sources" key={source.id}>
-                                        <a id="sources-link" href={source.url} target="_blank">{source.name}</a>
-                                    </div>
-                                )) :
-                                    <div id="loading">Loading...</div>
-                                }
-                            </Navigation>
-                        </Drawer>
-                    </Layout>
-                </div>
-            </div>
+            <Drawer title="SOURCES">
+                <Navigation>
+                    {this.state.sources.length ? this.state.sources.map((source) => (
+                        <div id="sources" key={source.id}>
+                            <a id="sources-link" href={source.url} target="_blank">{source.name}</a>
+                        </div>
+                    )) :
+                        <div id="loading">Loading...</div>
+                    }
+                </Navigation>
+            </Drawer>
         );
     }
 }
