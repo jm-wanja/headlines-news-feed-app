@@ -1,18 +1,17 @@
 import React from 'react';
-import SourcesPanel from './SourcesPanel.js';
-import ArticlesPanel from './ArticlesPanel.js';
-import SortPanel from './SortPanel.js';
-import GooglePlusLogin from './LoginButton.js';
-import HeaderPanel from './HeaderPanel.js'
-import { Layout, Drawer, Navigation, Header, Textfield } from "react-mdl";
-
+import SourcesPanel from './SourcesPanel';
+import ArticlesPanel from './ArticlesPanel';
+import SortPanel from './SortPanel';
+import GooglePlusLogin from './LoginButton';
+import HeaderPanel from './HeaderPanel';
+import { Layout, Drawer, Navigation, Header, Textfield } from 'react-mdl';
 
 
 export default class RssFeed extends React.Component {
     render() {
         return (
             <div className='rssFeed' >
-                {/*<div className='headerPanel'>
+                {/* <div className='headerPanel'>
                     <HeaderPanel />
                 </div>
                 <div className='sourcesPanel'>
@@ -26,7 +25,7 @@ export default class RssFeed extends React.Component {
                 <div className='loginButton'>
                     <GooglePlusLogin />
                 </div>*/}
-                {/*<Layout fixedHeader fixedDrawer>
+                {/* <Layout fixedHeader fixedDrawer>
                     <HeaderPanel />
                     <SourcesPanel />
                     <ArticlesPanel />

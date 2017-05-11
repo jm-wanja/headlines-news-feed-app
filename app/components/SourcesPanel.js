@@ -4,15 +4,15 @@ import { Layout, Drawer, Navigation } from "react-mdl";
 
 export default class SourcesPanel extends React.Component {
     constructor(props) {
-        super(props);//def this.props 
-        this.state = { //initialize state because the data will change
-            sources: [] //empty array because the data from api is in an array
-        }
+        super(props);// def this.props
+        this.state = { // initialize state because the data will change
+            sources: [] // empty array because the data from api is in an array
+        };
     }
 
-    componentWillMount() { //an instance of the component created
+    componentWillMount() { // an instance of the component created
         this.fetchSources().then((data) => {
-            this.setState({ //call setstate to change state to populate data into it
+            this.setState({ // call setstate to change state to populate data into it
                 sources: data.body.sources
             });
         });
@@ -21,7 +21,7 @@ export default class SourcesPanel extends React.Component {
         return (
             request
                 .get('https://newsapi.org/v1/sources?language=en')
-        )
+        );
     }
     render() {
         console.log("State", this.state);
