@@ -4,10 +4,11 @@ import Cookies from 'js-cookie';
  */
 class User {
   constructor() {
+    Cookies.set('ITN',{email:"julie.mugira@andela.com",name:"Julie Mugira"})
     this.userDetails = Cookies.get('') // get cookie
       === undefined ? undefined : JSON.parse(Cookies.get('ITN'));
     this.isLogin = this.isLoggedIn();
-    // this.favorites = '';
+    this.favorites = '';
     this.name = '';
     this.imageUrl = '';
     this.email = '';
@@ -41,16 +42,16 @@ class User {
    */
   assignUserValues() {
     if (this.isLogin) {
-    //   this.favorites = this.userDetails.favorites;
+      this.favorites = this.userDetails.favorites;
       this.name = this.userDetails.name;
       this.email = this.userDetails.email;
       this.imageUrl = this.userDetails.imageUrl;
     }
   }
 
-//   removeFavourite(item, index) {
-//     this.favorites.splice(index, 1);
-//   }
+  removeFavourite(item, index) {
+    this.favorites.splice(index, 1);
+  }
   /**
    * @returns {*} returns updated cookie storage
    */

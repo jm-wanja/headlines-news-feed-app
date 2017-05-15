@@ -4,8 +4,9 @@ import React from 'react';
  * @return {*} render the footer component
 */
 
-const Footer = () => (
-  <footer className="page-footer pink">
+function Footer(){
+  return (
+    <footer className="page-footer pink">
     <div className="footer-copyright">
       <div className="container">
         <p className="copyright text-muted">
@@ -15,8 +16,8 @@ const Footer = () => (
         </p>
       </div>
     </div>
-  </footer>
-);
+  </footer>);
+}
 
 
 export default Footer;

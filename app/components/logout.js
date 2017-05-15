@@ -20,7 +20,7 @@ class Logout extends React.Component {
     if (user.isLogin) {
       user.logOut();
       history.push('/#/login'); // redirect to login page without refresh
-      global.window.location.reload();
+      document.location.reload();
     } else {
       history.push('/#/login');
     }

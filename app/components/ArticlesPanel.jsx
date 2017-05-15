@@ -23,7 +23,9 @@ class ArticlesPanel extends React.Component {
       orderBy: [],
       currentSource: '',
       currentSortValue: '',
-      clearable: false
+      clearable: false,
+      setIsLoading: false,
+      unsetWelcome: true
     };
     this.getItemsState = this.getItemsState.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -47,8 +49,8 @@ class ArticlesPanel extends React.Component {
    */
   onChange() {
     this.setState(this.getItemsState());
-    this.props.setIsLoading(false);
-    this.props.unsetWelcome();
+    this.setState.setIsLoading(false);
+    this.setState.unsetWelcome();
   }
 
   /**
@@ -74,7 +76,7 @@ class ArticlesPanel extends React.Component {
     this.setState({ currentSortValue: value });
     const urlString = `${this.state.currentSource}&sortBy=${value}`;
     getNewsArticles(urlString, value);
-    this.props.setIsLoading(true);
+    this.setState.setIsLoading(true);
   }
 
    /**

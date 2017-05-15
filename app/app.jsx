@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, hashHistory, Route, IndexRoute } from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Main from './components/Main.jsx';
 import Home from './components/Home.jsx';
 import ArticlesPanel from './components/ArticlesPanel.jsx';
@@ -23,22 +23,21 @@ function requireAuth(nextState, replace) {
   }
 }
 
-const app = document.getElementById('app');
 
 /**
  * Render the Routes of the News Page
  * @return {Page} the routes of the page
  */
 ReactDOM.render(
-  <div>
-    <Router history={hashHistory}>
-      <Route path="/" component={Main} onEnter={requireAuth}>
-        <IndexRoute component={Home} />
-        <Route path="articlespanel" component={ArticlesPanel} />
-      </Route>
-      <Route path="login" component={Login} />
-      <Route path="logout" component={Logout} />
-    </Router>
-  </div>,
-  app,
+    <BrowserRouter>
+      <div>
+        <Route path="/" component={Home} onEnter={requireAuth}/>
+        <Route path="/login" component={Login} />
+        <Route path="/logout" component={Logout} />
+      </div>
+
+    </BrowserRouter>,
+    document.getElementById('app')
 );
+
+// ReactDOM.render(<Login />, app)

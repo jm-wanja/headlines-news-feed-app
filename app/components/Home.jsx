@@ -2,13 +2,15 @@ import React from 'react';
 import SourcesStore from '../stores/SourcesStore';
 import SourcesPanel from './SourcesPanel.jsx';
 import ArticlesPanel from './ArticlesPanel.jsx';
+import Header from './HeaderPanel.jsx';
+import Footer from './Footer.jsx';
 import { getNewsSources } from '../actions/AppActions';
 
 /**
  * Class to hold the main component.
  * @extends React.Component
  */
-class Home extends React.Component {
+ export default class Home extends React.Component {
   /**
    * Set the Initial conditions for Home component
    * @param {*} props - The properties of the Home Class
@@ -107,6 +109,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="main-component">
+        <Header />
         <div className="row">
           <SourcesPanel
             sources={this.state.sources}
@@ -123,9 +126,9 @@ class Home extends React.Component {
           welcome={this.state.welcome}
           unsetWelcome={this.unsetWelcome}
         />
+        <Footer />
       </div>
     );
   }
 }
 
-export default Home;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
-//  * @return {*} return the Nav component
+//  * @return {*} return the Header component
 // */
-const Header = () => (
-  <div className="navbar-fixed">
+export function Header(){
+  return (<div className="navbar-fixed">
     <nav className="pink" role="navigation">
       <div className="nav-wrapper container">
         <IndexLink to="/" classID="logo-container" className="brand-logo">
@@ -26,7 +26,5 @@ const Header = () => (
         </a>
       </div>
     </nav>
-  </div>
-);
-
-export default Header;
+  </div>);
+}
