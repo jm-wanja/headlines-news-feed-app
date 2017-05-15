@@ -1,69 +1,32 @@
-/* import React from 'react';
-import { Header } from 'react-mdl';
-
-export class HeaderPanel extends React.Component {
-  render() {
-    return (
-            <div>
-                 <div className='feed-name'>NEWSLY READER</div>
-                <Header title="NEWSLY READER" style={{ marginLeft: '240px' }}>
-
-                </Header>
-            </div>
-    );
-  }
-}*/
-
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
-class Header extends React.Component {
-  constructor() {
-    super();
-
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
-  }
-
-
-  handleLogoutClick() {
-    localStorage.removeItem('id_token');
-    hashHistory.push('/login');
-  }
-
-  render() {
-    function LogOutButton(props) {
-      return (
-      <li>
-        <button className="btn btn-danger log" style={{ paddingLeft: 15 }} onClick={props.onClick}>Log out 
-        </button>
-      </li>
-      );
-    }
-
-    let button = null;
-    const IsLoggedIn = localStorage.getItem('id_token');
-    if (IsLoggedIn) {
-      button = < LogOutButton onClick={this.handleLogoutClick}/>;
-    }
-
-    return (
-      <div className="col-sm-12" style={{ margin: 15 }}>
-        <div className="navbar-header">
-          <Link className="navbar-brand" to="/">InTheKnow</Link>
-
-        </div>
-        <ul className="nav navbar-nav">
+//  * @return {*} return the Nav component
+// */
+const Header = () => (
+  <div className="navbar-fixed">
+    <nav className="pink" role="navigation">
+      <div className="nav-wrapper container">
+        <IndexLink to="/" classID="logo-container" className="brand-logo">
+          InTheKnow
+        </IndexLink>
+        <ul className="right hide-on-med-and-down">
           <li>
-            <Link to="bookmarks">Favourites</Link>
+            <Link to="/logout">Logout</Link>
           </li>
         </ul>
-        <ul className="nav navbar-nav navbar-right" style={{ marginRight: 15 }}>
-          {button}
-        </ul>
-      </div>
 
-    );
-  }
-}
+        <ul classID="nav-mobile" className="side-nav">
+          <li>
+            <Link to="/logout">Logout</Link>
+          </li>
+        </ul>
+        <a href="/#" data-activates="nav-mobile" className="button-collapse">
+          <i className="material-icons">Menu</i>
+        </a>
+      </div>
+    </nav>
+  </div>
+);
 
 export default Header;

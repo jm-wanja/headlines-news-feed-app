@@ -4,10 +4,8 @@ import { hashHistory } from 'react-router';
 import user from './userDetails';
 
 class Login extends React.Component {
-  constructor() {
-    super();
-  }
 
+// store user data in local storage html5
   storeUserData(response) {
     localStorage.setItem('id_token', response.googleId);
     console.log(response);

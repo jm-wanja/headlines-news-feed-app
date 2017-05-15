@@ -2,7 +2,7 @@ import React from 'react';
 import SourcesPanel from './SourcesPanel';
 import ArticlesPanel from './ArticlesPanel';
 import SortPanel from './SortPanel';
-import GooglePlusLogin from './LoginButton';
+import Login from './LoginPage';
 import HeaderPanel from './HeaderPanel';
 import { Layout, Drawer, Navigation, Header, Textfield } from 'react-mdl';
 

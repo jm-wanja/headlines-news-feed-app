@@ -1,9 +1,11 @@
-import Dispatcher from '../dispatchers/AppDispatcher';
+import * as api from '../utils/api';
+import AppDispatcher from '../dispatchers/AppDispatcher';
+import ActionTypes from '../constants/ActionTypes.jsx';
 
 export function getNewsSources() {
   api.getNewsSources((data) => {
-    Dispatcher.dispatch({
-      actionType: 'GET_NEWS_SOURCES',
+    AppDispatcher.dispatch({
+      actionType: ActionTypes.GET_NEWS_SOURCES,
       data,
     });
   });
@@ -11,8 +13,8 @@ export function getNewsSources() {
 
 export function getNewsArticles(source, option) {
   api.getNewsArticles(source, option, (data) => {
-    Dispatcher.dispatch({
-      actionType: 'GET_NEWS_ARTICLES',
+    AppDispatcher.dispatch({
+      actionType: ActionTypes.GET_NEWS_ARTICLES,
       data,
     });
   });
