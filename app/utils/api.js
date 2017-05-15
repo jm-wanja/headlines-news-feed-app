@@ -1,26 +1,30 @@
-// import axios from 'axios';
-
-// const apiURL = 'https://newsapi.org/v1';
-// const apiKey = '213327409d384371851777e7c7f78dfe';
-
-// export function getArticles(source) {
-//   return axios.get(`${apiURL}/articles?source=${source}&sortBy=latest&apiKey=${apiKey}`)
-//         .then(response => response.data.articles)
-//         .catch(error => error.data);
-// }
-
 import axios from 'axios';
 
-// const baseUrl = 'https://newsapi.org/v1/';
-// const apiKey = '213327409d384371851777e7c7f78dfe';
+const apiUrl = 'https://newsapi.org/v1/';
+const apiKey = '213327409d384371851777e7c7f78dfe';
 
+  /**
+   * class to fetch news articles an handle sorting.
+   * @param {*} source - the source news sources
+   * @param {*} option - the sortBy
+   *  @param {*} callback - the callback that handles event changes
+   * @returns {*} - object containing the list of articles based on sources
+   */
 export function getNewsArticles(source, option, callback) {
-  const url = `https://newsapi.org/v1/articles?source=${source}&sortBy=${option}&apiKey=213327409d384371851777e7c7f78dfe`;
-  axios.get(url).then(response => callback(response.data));
+  const url = `${apiUrl}/articles?source=${source}&sortBy=${option}&apiKey=${apiKey}`;
+  axios.get(url).then(response => callback(response.data))
+  .catch(error => error.data);
 }
 
+
+  /**
+   * function to fetch news sources from the newsapi.
+   * @param {*} callback - the callback that handles event changes
+   * @returns {*} - object containing the list of news sources
+   */
 export function getNewsSources(callback) {
-  const url = 'https://newsapi.org/v1/sources';
-  axios.get(url).then(response => callback(response.data.sources));
+  const url = `${apiUrl}/sources`;
+  axios.get(url).then(response => callback(response.data.sources))
+  .catch(error => error.data);
 }
 

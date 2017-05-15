@@ -1,5 +1,7 @@
 import Cookies from 'js-cookie';
-
+/**
+ * @class User
+ */
 class User {
   constructor() {
     this.userDetails = Cookies.get('') // get cookie
@@ -11,7 +13,11 @@ class User {
     this.email = '';
     this.assignUserValues();
   }
-
+  /**
+   * @description  logs the user in.
+   * @param {any} response an object containing user profile
+   * @returns {undefined} it returns no value
+   */
   login(response) {
     const user = response.w3;
     Cookies.set('ITN', { // set cookie
@@ -29,7 +35,10 @@ class User {
   isLoggedIn() {
     return !(this.userDetails === undefined);
   }
-
+  /**
+   * @description assigns User values
+   * @returns {boolean} returns true or false
+   */
   assignUserValues() {
     if (this.isLogin) {
     //   this.favorites = this.userDetails.favorites;
@@ -42,7 +51,9 @@ class User {
 //   removeFavourite(item, index) {
 //     this.favorites.splice(index, 1);
 //   }
-
+  /**
+   * @returns {*} returns updated cookie storage
+   */
   logOut() {
     this.isLogin = false;
     Cookies.remove('ITN'); // remove cookie

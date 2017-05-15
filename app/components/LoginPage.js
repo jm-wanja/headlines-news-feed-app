@@ -1,8 +1,11 @@
 import React from 'react';
 import { GoogleLogin } from 'react-google-login-component';
 import { hashHistory } from 'react-router';
-import user from './userDetails';
-
+import user from './UserDetails';
+/**
+ * Class displaying Logout Page
+ * @extends React.Component
+ */
 class Login extends React.Component {
 
 // store user data in local storage html5
