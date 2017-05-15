@@ -23,7 +23,7 @@ function requireAuth(nextState, replace) {
   }
 }
 
-const app = global.document.getElementById('app');
+const app = document.getElementById('app');
 
 /**
  * Render the Routes of the News Page
