@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './HeaderPanel.jsx';
 import Footer from './Footer.jsx';
-// import Home from './Home.jsx';
-// import ArticlesPanel from './ArticlesPanel.jsx';
+import Home from './Home.jsx';
+import DefaultPage from './DefaultPage.jsx';
+import Sources from './Sources.jsx';
+import Share from './SocialMedia.jsx';
+import ArticlesPanel from './ArticlesPanel.jsx';
 
 
 /**
@@ -17,7 +20,10 @@ class Main extends React.Component {
     return (
       <div>
         <Header />
-        <p>Greeting from Main!</p>
+        <Share title="Title" share="Share"/>
+        <ArticlesPanel sortBy={["top"]}/>
+        {/*<DefaultPage sources={[]}/>*/}
+        <Footer />
       </div>
     );
   }

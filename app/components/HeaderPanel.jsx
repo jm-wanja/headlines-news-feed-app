@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 // const Header = () => (
 class Header extends React.Component {
   render() {
-    console.log(Link);
     return (
       <div className="navbar-fixed">
         

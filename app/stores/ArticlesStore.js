@@ -73,9 +73,9 @@ const ArticlesStore = new ArticleStore();
 AppDispatcher.register((payload) => {
   switch (payload.actionType) {
     case ActionTypes.GET_NEWS_ARTICLES:
-      ArticlesStore.articles = [...payload.content.articles];
-      ArticlesStore.articlesSource = payload.content.source;
-      ArticlesStore.articlesSortBy = payload.content.sortBy;
+      ArticlesStore.articles = [...payload.data.articles];
+      ArticlesStore.articlesSource = payload.data.source;
+      ArticlesStore.articlesSortBy = payload.data.sortBy;
       ArticlesStore.emitChange();
       break;
     default:

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShareButtons, generateShareIcon } from 'react-share';
+import PropTypes from 'prop-types';
 
 /**
  * Instantiate the share buttons
@@ -64,8 +65,8 @@ class Share extends React.Component {
  * Set the PropTypes for the Share buttons
  */
 Share.propTypes = {
-  share: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
+  share: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Share;

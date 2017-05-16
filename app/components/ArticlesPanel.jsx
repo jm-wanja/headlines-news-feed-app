@@ -24,8 +24,6 @@ class ArticlesPanel extends React.Component {
       currentSource: '',
       currentSortValue: '',
       clearable: false,
-      setIsLoading: false,
-      unsetWelcome: true
     };
     this.getItemsState = this.getItemsState.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -34,6 +32,10 @@ class ArticlesPanel extends React.Component {
     this.getNewSortByValue = this.updateSearch.bind(this);
     this.getNewSortByValue = this.getNewSortByValue.bind(this);
   }
+
+  // componentDidMount(){
+  //   let data = getNewsArticles('abc-news-au','top');
+  // }
 
   /**
    * Invoked immediately after a component is mounted
@@ -49,8 +51,8 @@ class ArticlesPanel extends React.Component {
    */
   onChange() {
     this.setState(this.getItemsState());
-    this.setState.setIsLoading(false);
-    this.setState.unsetWelcome();
+    this.props.setIsLoading(false);
+    this.props.unsetWelcome();
   }
 
   /**
@@ -76,7 +78,7 @@ class ArticlesPanel extends React.Component {
     this.setState({ currentSortValue: value });
     const urlString = `${this.state.currentSource}&sortBy=${value}`;
     getNewsArticles(urlString, value);
-    this.setState.setIsLoading(true);
+    this.props.setIsLoading(true);
   }
 
    /**
@@ -136,11 +138,11 @@ class ArticlesPanel extends React.Component {
  */
 ArticlesPanel.propTypes = {
   sources: PropTypes.array,
-  sortBy: PropTypes.array.isRequired,
+  sortBy: PropTypes.array,
   isLoading: PropTypes.bool,
   welcome: PropTypes.bool,
-  setIsLoading: PropTypes.func.isRequired,
-  unsetWelcome: PropTypes.func.isRequired,
+  setIsLoading: PropTypes.func,
+  unsetWelcome: PropTypes.func,
 };
 
 export default ArticlesPanel;
