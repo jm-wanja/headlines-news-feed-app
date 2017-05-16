@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Main from './components/Main.jsx';
-import Home from './components/Home.jsx';
-import ArticlesPanel from './components/ArticlesPanel.jsx';
-import Login from './components/LoginPage';
-import Logout from './components/Logout';
-import user from './components/UserDetails';
+// import Home from './components/Home.jsx';
+// import ArticlesPanel from './components/ArticlesPanel.jsx';
+// import Login from './components/LoginPage';
+// import Logout from './components/Logout';
+// import user from './components/UserDetails';
 
 /**
  * Check if the user is logged in
@@ -23,21 +23,28 @@ function requireAuth(nextState, replace) {
   }
 }
 
+// class Abc extends Component {
+//   render() {
+//     return (<p>Abc</p>)
+//   }
+// }
+
 
 /**
  * Render the Routes of the News Page
  * @return {Page} the routes of the page
  */
 ReactDOM.render(
-    <BrowserRouter>
-      <div>
-        <Route path="/" component={Home} onEnter={requireAuth}/>
-        <Route path="/login" component={Login} />
-        <Route path="/logout" component={Logout} />
-      </div>
+  <BrowserRouter>
+    <div>
+      <Route path="/" component={Main} onEnter={requireAuth}/>
+      {/*<Route path="/articlespanel" component={ArticlesPanel} />
+      <Route path="/login" component={Login} />
+      <Route path="/logout" component={Logout} />*/}
+    </div>
 
-    </BrowserRouter>,
-    document.getElementById('app')
+  </BrowserRouter>,
+  document.getElementById('app')
 );
 
 // ReactDOM.render(<Login />, app)
