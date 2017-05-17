@@ -34,7 +34,7 @@ class ArticlesPanel extends React.Component {
   }
 
   // componentDidMount(){
-  //   let data = getNewsArticles('abc-news-au','top');
+  //   getNewsArticles('abc-news-au','top');
   // }
 
   /**
@@ -104,7 +104,7 @@ class ArticlesPanel extends React.Component {
 
   /**
    * Display the News Component
-   * @return {jsx} render the ViewNews Content
+   * @return {jsx} render the ArticlesPanel Content
    */
   render() {
     const myArticles = this.state.allItems.map(item =>

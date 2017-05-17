@@ -2,8 +2,6 @@ import React from 'react';
 import SourcesStore from '../stores/SourcesStore';
 import SourcesPanel from './SourcesPanel.jsx';
 import ArticlesPanel from './ArticlesPanel.jsx';
-import Header from './HeaderPanel.jsx';
-import Footer from './Footer.jsx';
 import { getNewsSources } from '../actions/AppActions';
 
 /**
@@ -28,8 +26,14 @@ import { getNewsSources } from '../actions/AppActions';
     this.setSortBy = this.setSortBy.bind(this);
     this.setIsLoading = this.setIsLoading.bind(this);
     this.unsetWelcome = this.unsetWelcome.bind(this);
+    console.log('Im sure', getNewsSources('abc-news-au'));
   }
-
+  // componentDidMount(){
+  //   this.setState({
+  //     sources: getNewsSources('abc-news-au','top')
+  //   });
+  //   // let data = getNewsSources('abc-news-au','top');
+  // }
   /**
    * Get the initial state from stores
    * @return {*} the current state.
@@ -52,9 +56,9 @@ import { getNewsSources } from '../actions/AppActions';
    * @return {*} the new state and props
    */
   onChange() {
-    const itemState = this.getItemsState();
+    // const itemState = this.getItemsState();
     this.setState({
-      sources: itemState.sources || [],
+      sources: this.getItemsState().sources || [],
       isLoading: false,
     });
   }
@@ -110,14 +114,14 @@ import { getNewsSources } from '../actions/AppActions';
     return (
       <div className="main-component">
         <div className="row">
-          <SourcesPanel
+          <SourcesPanel // view sources
             sources={this.state.sources}
             setSortBy={this.setSortBy}
             loading={this.state.isLoading}
             setIsLoading={this.setIsLoading}
           />
         </div>
-        <ArticlesPanel
+        <ArticlesPanel // view articles
           sources={this.state.sources}
           sortBy={this.state.sortBy}
           isLoading={this.state.isLoading}

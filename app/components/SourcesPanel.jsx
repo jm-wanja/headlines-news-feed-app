@@ -36,6 +36,7 @@ class SourcesPanel extends React.Component {
       newsSource: `Viewing news from ${event.label}`,
       sourceDescription: event.description,
     });
+    // then action getnewsarticles is dispatched
     getNewsArticles(value);
     const sortBy = value.split('?sortBy=')[1].split(',');
     this.props.setSortBy(sortBy);
@@ -46,7 +47,7 @@ class SourcesPanel extends React.Component {
    * @param {sources} sources - an array of all the news sources
    * @return {object} return each news source
    */
-  mapStateToOptions(sources) {
+  mapStateToOptions(sources) { // function that returns an object with options for my form 
     this.sourcesMap = sources;
     return sources.map(source => ({
       value: `${source.id}?sortBy=${source.sortBysAvailable.join()}`,
@@ -77,10 +78,10 @@ class SourcesPanel extends React.Component {
                   options={this.mapStateToOptions(this.props.sources)}
                   value={this.state.currentValue}
                   className="search-bar"
-                  onChange={this.updateSearch}
+                  onChange={this.updateSearch} // on change handler 
                   autofocus
                   clearable={this.state.clearable}
-                  placeholder="Select News Source"
+                  placeholder="Select News Source" // displayed when there's no value
                 />
               </div>
             </div>

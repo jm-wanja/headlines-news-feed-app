@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import Main from './components/Main.jsx';
-// import Home from './components/Home.jsx';
-// import ArticlesPanel from './components/ArticlesPanel.jsx';
+import Home from './components/Home.jsx';
+import ArticlesPanel from './components/ArticlesPanel.jsx';
 // import Login from './components/LoginPage';
 // import Logout from './components/Logout';
 // import user from './components/UserDetails';
@@ -35,15 +36,23 @@ function requireAuth(nextState, replace) {
  * @return {Page} the routes of the page
  */
 ReactDOM.render(
-  <BrowserRouter>
+  <div>
+    <Router>
+      <div>
+        <Route path="/" component={Main} onEnter={requireAuth}/>
+        {/*<Route path="/articlespanel" component={ArticlesPanel} />*/}
+      </div>
+    </Router>
+  </div>,
+  /*<BrowserRouter>
     <div>
       <Route path="/" component={Main} onEnter={requireAuth}/>
-      {/*<Route path="/articlespanel" component={ArticlesPanel} />
+      <Route path="/articlespanel" component={ArticlesPanel} />
       <Route path="/login" component={Login} />
-      <Route path="/logout" component={Logout} />*/}
+      <Route path="/logout" component={Logout} />
     </div>
 
-  </BrowserRouter>,
+  </BrowserRouter>,*/
   document.getElementById('app')
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Class to display the share component.
+ * Class to display the loading component.
  * @extends React.Component
  * @return {*} return the loader.
  */

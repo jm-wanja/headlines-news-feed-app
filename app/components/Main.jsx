@@ -7,10 +7,14 @@ import DefaultPage from './DefaultPage.jsx';
 import Sources from './Sources.jsx';
 import Share from './SocialMedia.jsx';
 import ArticlesPanel from './ArticlesPanel.jsx';
+import Articles from './Articles.jsx';
+import Login from './LoginPage';
+import Logout from './Logout';
+import SourcesPanel from './SourcesPanel.jsx';
 
 
 /**
- * Class to display the share component.
+ * Class to display the main component.
  * @extends React.Component
  * @param {*} props - the parent component state values
  * @return {jsx} return the main component.
@@ -20,20 +24,19 @@ class Main extends React.Component {
     return (
       <div>
         <Header />
+        <Home />
+        {/*{props.children}*/}
+        {/*<SourcesPanel />*/}
+        {/*<Logout />
+        <Articles />
         <Share title="Title" share="Share"/>
         <ArticlesPanel sortBy={["top"]}/>
-        {/*<DefaultPage sources={[]}/>*/}
+        <DefaultPage sources={[]}/>*/}
         <Footer />
       </div>
     );
   }
 }
-/*function Main (){
-  <div>
-    <Header />
-    <Footer />
-  </div>
-}*/
 
 /**
  * Set the PropTypes for Main component

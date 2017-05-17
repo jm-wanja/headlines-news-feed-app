@@ -19,6 +19,7 @@ const Articles = props => (
         </div>
         <div className="card-action">
           <Share share={props.data.url} title={props.data.title} />
+          {/*to open article in new social tab*/}
           <a
             className="btn waves-effect waves-light pink"
             target="_blank"
