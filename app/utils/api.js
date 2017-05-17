@@ -4,7 +4,7 @@ const apiUrl = 'https://newsapi.org/v1/';
 const apiKey = '213327409d384371851777e7c7f78dfe';
 
   /**
-   * class to fetch news articles an handle sorting.
+   * class to fetch news articles and handle sorting.
    * @param {*} source - the source news sources
    * @param {*} option - the sortBy
    *  @param {*} callback - the callback that handles event changes

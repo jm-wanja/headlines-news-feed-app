@@ -16,6 +16,7 @@ class SourceStore extends EventEmitter {
   constructor() {
     super();
     this.sources = [];
+    this.currentSource = '';
   }
 
   /**
@@ -24,6 +25,7 @@ class SourceStore extends EventEmitter {
   getAll() {
     return this.sources;
   }
+
   /**
    * @returns {*} listens for change and emits the data to the view
    */

@@ -75,8 +75,7 @@ class ArticlesPanel extends React.Component {
    */
   updateSearch(event) {
     const value = event.value;
-    this.setState({ currentSortValue: value });
-    const urlString = `${this.state.currentSource}&sortBy=${value}`;
+    const urlString = `${ArticlesStore.getSourceValue()}&sortBy=${value}`;
     getNewsArticles(urlString, value);
     this.props.setIsLoading(true);
   }

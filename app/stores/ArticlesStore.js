@@ -33,7 +33,7 @@ class ArticleStore extends EventEmitter {
    * @returns {object} returns list of news sources
    */
   getSourceValue() {
-    return this.articleSource;
+    return this.articlesSource;
   }
   /**
    * @returns {object} returns list of articles sortbys

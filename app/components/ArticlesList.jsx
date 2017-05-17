@@ -6,6 +6,13 @@ import Select from 'react-select';
  * @param {props} props - the parent state properties
  * @return {*} return the ArticlesList component
 */
+
+let options = [
+  { value: 'top', label: 'Top' },
+  { value: 'latest', label: 'Latest' },
+  { value: 'popular', label: 'Popular' }
+];
+
 const ArticlesList = props => (
   <div className="section">
     <div className="container">
@@ -16,7 +23,7 @@ const ArticlesList = props => (
         <div className="col s12 m3 light">
           <Select
             name="sort-by"
-            options={props.sortOptions}
+            options={options}
             value={props.currentSortValue}
             onChange={props.updateSearch}
             placeholder="Sort News By"
