@@ -116,7 +116,9 @@ class ArticlesPanel extends React.Component {
       return (
         <Loading />
       );
+      console.log('welcome', this.props.welcome)
     } else if (this.props.welcome) {
+
       return (
         <DefaultPage sources={this.props.sources} />
       );
@@ -138,11 +140,11 @@ class ArticlesPanel extends React.Component {
  */
 ArticlesPanel.propTypes = {
   sources: PropTypes.array,
-  sortBy: PropTypes.array,
+  sortBy: PropTypes.array.isRequired,
   isLoading: PropTypes.bool,
   welcome: PropTypes.bool,
-  setIsLoading: PropTypes.func,
-  unsetWelcome: PropTypes.func,
+  setIsLoading: PropTypes.func.isRequired,
+  unsetWelcome: PropTypes.func.isRequired,
 };
 
 export default ArticlesPanel;

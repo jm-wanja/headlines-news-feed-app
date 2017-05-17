@@ -40,7 +40,7 @@ ReactDOM.render(
     <Router>
       <div>
         <Route path="/" component={Main} onEnter={requireAuth}/>
-        {/*<Route path="/articlespanel" component={ArticlesPanel} />*/}
+        <Route path="/articlespanel" component={ArticlesPanel} />
       </div>
     </Router>
   </div>,

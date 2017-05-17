@@ -26,7 +26,7 @@ import { getNewsSources } from '../actions/AppActions';
     this.setSortBy = this.setSortBy.bind(this);
     this.setIsLoading = this.setIsLoading.bind(this);
     this.unsetWelcome = this.unsetWelcome.bind(this);
-    console.log('Im sure', getNewsSources('abc-news-au'));
+    // console.log('Im sure', getNewsSources('abc-news-au'));
   }
   // componentDidMount(){
   //   this.setState({

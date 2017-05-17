@@ -56,7 +56,8 @@ const SourcesStore = new SourceStore();
 AppDispatcher.register((payloads) => {
   switch (payloads.actionType) {
     case ActionTypes.GET_NEWS_SOURCES:
-      SourcesStore.sources = [...payloads.content];
+    console.log('getting payload: ', payloads);
+      SourcesStore.sources = [...payloads.data];
       SourcesStore.emitChange();
       break;
     default:

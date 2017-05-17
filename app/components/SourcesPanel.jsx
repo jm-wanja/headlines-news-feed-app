@@ -2,6 +2,8 @@ import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 import { getNewsArticles } from '../actions/AppActions';
+import DefaultPage from './DefaultPage.jsx';
+import SourcesStore from '../stores/SourcesStore';
 
 /**
  * Class  displaying the Search Form.
@@ -61,7 +63,13 @@ class SourcesPanel extends React.Component {
    * @return {*} render the Search Form
    */
   render() {
+
+    // const sourcesComp = this.props.sources.map(source =>
+    //   <Sources key={source.id} data={source} />
+    // )
+
     return (
+
       <div className="">
         <div className="section no-pad-bot">
           <div className="container">
@@ -89,6 +97,8 @@ class SourcesPanel extends React.Component {
             <p className="center light"> {this.state.sourceDescription}</p>
           </div>
         </div>
+        {/*<div> It should render here </div>
+        <DefaultPage sources={this.props.sources} />*/}
       </div>
     );
   }
