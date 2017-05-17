@@ -116,7 +116,7 @@ class ArticlesPanel extends React.Component {
       return (
         <Loading />
       );
-      console.log('welcome', this.props.welcome)
+      // console.log('welcome', this.props.welcome)
     } else if (this.props.welcome) {
 
       return (

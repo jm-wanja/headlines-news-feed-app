@@ -2,7 +2,6 @@ import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 import { getNewsArticles } from '../actions/AppActions';
-import DefaultPage from './DefaultPage.jsx';
 import SourcesStore from '../stores/SourcesStore';
 
 /**
@@ -26,7 +25,7 @@ class SourcesPanel extends React.Component {
 
   /**
    * Method to set the currently selected news source,
-   * Method to send request to the News Actions.
+   * Method to send request to the App Actions.
    * @param {event} event - the select-box change event
    * @return {*} return the new state and props
    */
@@ -38,10 +37,11 @@ class SourcesPanel extends React.Component {
       newsSource: `Viewing news from ${event.label}`,
       sourceDescription: event.description,
     });
+    // console.log('getNewsArticles', value)
     // then action getnewsarticles is dispatched
     getNewsArticles(value);
-    const sortBy = value.split('?sortBy=')[1].split(',');
-    this.props.setSortBy(sortBy);
+    // const sortBy = value.split('?sortBy=');
+    // this.props.setSortBy(sortBy);
   }
 
   /**
@@ -49,13 +49,15 @@ class SourcesPanel extends React.Component {
    * @param {sources} sources - an array of all the news sources
    * @return {object} return each news source
    */
-  mapStateToOptions(sources) { // function that returns an object with options for my form 
+  mapStateToOptions(sources) { // function that returns an object with options for my form = all sources
     this.sourcesMap = sources;
-    return sources.map(source => ({
-      value: `${source.id}?sortBy=${source.sortBysAvailable.join()}`,
-      label: source.name,
-      description: source.description,
-    }));
+    return sources.map(source => {
+      return {
+        value: `${source.id}`,
+        label: source.name,
+        description: source.description,
+      }
+    });
   }
 
   /**

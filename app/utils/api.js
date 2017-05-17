@@ -11,7 +11,7 @@ const apiKey = '213327409d384371851777e7c7f78dfe';
    * @returns {*} - object containing the list of articles based on sources
    */
 export function getNewsArticles(source, option, callback) {
-  const url = `${apiUrl}/articles?source=${source}&sortBy=${option}&apiKey=${apiKey}`;
+  const url = `${apiUrl}articles?source=${source}&sortBy=${option ? option: '' }&apiKey=${apiKey}`;
   axios.get(url).then(response => callback(response.data))
   .catch(error => error.data);
 }
