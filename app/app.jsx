@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Main from './components/Main.jsx';
 // import ArticlesPanel from './components/ArticlesPanel.jsx';
-import Login from './components/Login';
+import Login from './components/Login.jsx';
 import Logout from './components/Logout';
 import user from './components/UserDetails';
 

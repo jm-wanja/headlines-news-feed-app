@@ -1,10 +1,8 @@
 import React from 'react';
 
 /**
- * @param Footer
  * @return {*} render the footer component
 */
-
 function Footer() {
   return (
     <footer className="page-footer pink">
@@ -19,7 +17,6 @@ function Footer() {
     </div>
   </footer>);
 }
-
 
 export default Footer;
 

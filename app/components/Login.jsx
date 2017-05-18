@@ -1,25 +1,29 @@
 import React from 'react';
 import { GoogleLogin } from 'react-google-login-component';
-import { hashHistory } from 'react-router';
-import user from './UserDetails';
+// import { hashHistory } from 'react-router';
+// import user from './UserDetails';
+
 /**
- * Class displaying Logout Page
+ * Class displaying Login Page
  * @extends React.Component
  */
 class Login extends React.Component {
-
+//   constructor() {
+    // super();
+//   }
 // store user data in local storage html5
-  storeUserData(response) {
-    localStorage.setItem('id_token', response.googleId);
-    console.log(response);
-    console.log('response id', response.googleId);
-    hashHistory.push('/');
-  }
+//   storeUserData(response) {
+//     localStorage.setItem('id_token', response.googleId);
+//     console.log(response);
+//     console.log('response id', response.googleId);
+//     hashHistory.push('/');
+//   }
 
-  responseGoogle(googleUser) {
-    const idToken = googleUser.getAuthResponse().id_token;
-    console.log({ accessToken: idToken });
-  }
+//   responseGoogle(googleUser) {
+//     const idToken = googleUser.getAuthResponse().id_token;
+//     console.log({ accessToken: idToken });
+//   }
+
   /**
    * Display the login Component
    * @return {jsx} render the login Content
@@ -27,10 +31,10 @@ class Login extends React.Component {
   render() {
     const clientId = '598243534771-kfb4g1rpan869pnhoj8167j22fm5io7h.apps.googleusercontent.com';
     this.clientId = clientId;
-    const responseGoogle = (response) => {
-      user.login(response);
-      document.location.reload();
-    };
+    // const responseGoogle = (response) => {
+    // user.login(response);
+    // document.location.reload();
+    // };
     return (
             <div>
                 <nav className="pink">
