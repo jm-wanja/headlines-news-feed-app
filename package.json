@@ -1,13 +1,14 @@
 {
-  "name": "headlines-app",
+  "name": "inthenow",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "jest",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls.js && rm -rf ./coverage "
   },
+
   "dependencies": {
     "axios": "^0.16.1",
     "expect": "^1.20.2",
@@ -58,5 +59,8 @@
     "react-test-renderer": "^15.5.4",
     "sass-loader": "^6.0.3",
     "webpack": "^2.4.1"
+  },
+    "engines": {
+    "node":"^6.10.2"
   }
 }
