@@ -11,7 +11,7 @@ function Main() {
   return (
       <div>
         <Header />
-        <Home />
+         <Home />
         <Footer />
       </div>
   );

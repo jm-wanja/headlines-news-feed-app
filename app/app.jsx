@@ -13,14 +13,14 @@ import user from './components/UserDetails';
  * @param {string} replace the page to replace
  * @return {boolean} the login status
  */
-function requireAuth(nextState, replace) {
-  if (!user.isLogin) {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname },
-    });
-  }
-}
+// function requireAuth(nextState, replace) {
+//   if (!user.isLogin) {
+//     replace({
+//       pathname: '/login',
+//       state: { nextPathname: nextState.location.pathname },
+//     });
+//   }
+// }
 
 /**
  * Render the Routes of the News Page
@@ -30,14 +30,18 @@ ReactDOM.render(
   <div>
     <Router>
       <div>
-        <Route path="/" component={Main} onEnter={requireAuth}/>
-        {/*<Route path="/" component={Login} />*/}
-        <Route path="/main" component={Login} />
-        <Route path="/logout" component={Logout} />
+        {/* <Route path="/" component={Main} onEnter={requireAuth}/>*/}
+        {/* <Route path="/" component={Login} />*/}
+         <Route path="/" component={Login} />
+         {/* <Route path="/main" component={Main} />*/}
+        {/* <Route path="/logout" component={Logout} />*/}
+      </div>
+      <div>
+        <Route path="/main" component={Main} />
       </div>
     </Router>
   </div>,
-  /*<BrowserRouter>
+  /* <BrowserRouter>
     <div>
       <Route path="/" component={Main} onEnter={requireAuth}/>
       <Route path="/articlespanel" component={ArticlesPanel} />
