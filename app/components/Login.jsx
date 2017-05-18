@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleLogin } from 'react-google-login-component';
 // import { hashHistory } from 'react-router';
-// import user from './UserDetails';
+import user from './UserDetails';
 
 /**
  * Class displaying Login Page
@@ -9,20 +9,22 @@ import { GoogleLogin } from 'react-google-login-component';
  */
 class Login extends React.Component {
 //   constructor() {
-    // super();
+//     super();
 //   }
 // store user data in local storage html5
 //   storeUserData(response) {
+//     console.log('id_token', response);
 //     localStorage.setItem('id_token', response.googleId);
 //     console.log(response);
 //     console.log('response id', response.googleId);
-//     hashHistory.push('/');
 //   }
 
-//   responseGoogle(googleUser) {
-//     const idToken = googleUser.getAuthResponse().id_token;
-//     console.log({ accessToken: idToken });
-//   }
+  responseGoogle(googleUser) {
+    const idToken = googleUser.getAuthResponse().id_token;
+    localStorage.setItem('id_token', idToken);
+    document.location.reload();
+    console.log({ accessToken: idToken });
+  }
 
   /**
    * Display the login Component
@@ -31,10 +33,10 @@ class Login extends React.Component {
   render() {
     const clientId = '598243534771-kfb4g1rpan869pnhoj8167j22fm5io7h.apps.googleusercontent.com';
     this.clientId = clientId;
-    // const responseGoogle = (response) => {
-    // user.login(response);
-    // document.location.reload();
-    // };
+    const responseGoogle = (response) => {
+      user.login(response);
+      document.location.reload();
+    };
     return (
             <div>
                 <nav className="pink">
@@ -64,8 +66,6 @@ class Login extends React.Component {
                                     scope="profile"
                                     responseHandler={this.responseGoogle}
                                     buttonText="Login With Google+"
-                                    onSuccess={this.storeUserData}
-                                    onFailure={this.responseGoogle}
                                     className="btn-large waves-effect waves-light pink lighten-1"
                                 />
                             </div>
