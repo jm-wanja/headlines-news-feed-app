@@ -1,22 +1,15 @@
 import React from 'react';
-// const Link = require('react-router-dom').Link;
 import { Link } from 'react-router-dom';
 
 //  * @return {*} return the Header component
 // */
-// export function Header(){
-//   return 
-// const Header = () => (
-class Header extends React.Component {
-  render() {
-    return (
+function Header() {
+  return (
       <div className="navbar-fixed">
-        
         <nav className="pink" role="navigation">
-          
           <div className="nav-wrapper container">
             <Link to="/" classID="logo-container" className="brand-logo">
-              InTheKnow
+              InTheNow
             </Link>
             <ul className="right hide-on-med-and-down">
               <li>
@@ -34,8 +27,7 @@ class Header extends React.Component {
           </div>
         </nav>
       </div>
-    );
-  }
-};
+  );
+}
 
 export default Header;

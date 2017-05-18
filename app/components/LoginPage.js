@@ -20,7 +20,10 @@ class Login extends React.Component {
     const idToken = googleUser.getAuthResponse().id_token;
     console.log({ accessToken: idToken });
   }
-
+  /**
+   * Display the login Component
+   * @return {jsx} render the login Content
+   */
   render() {
     const clientId = '598243534771-kfb4g1rpan869pnhoj8167j22fm5io7h.apps.googleusercontent.com';
     this.clientId = clientId;

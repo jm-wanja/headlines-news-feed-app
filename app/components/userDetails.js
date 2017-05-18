@@ -3,6 +3,9 @@ import Cookies from 'js-cookie';
  * @class User
  */
 class User {
+  /**
+   * @constructor
+   */
   constructor() {
     this.isLogin = this.userDetails();
   }

@@ -7,7 +7,7 @@ import Select from 'react-select';
  * @return {*} return the ArticlesList component
 */
 
-let options = [
+const options = [
   { value: 'top', label: 'Top' },
   { value: 'latest', label: 'Latest' },
   { value: 'popular', label: 'Popular' }

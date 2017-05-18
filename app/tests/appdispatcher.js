@@ -1,5 +1,5 @@
 import expect from 'expect';
-import Dispatcher from '../../dispatcher/AppDispatcher';
+import Dispatcher from './../dispatchers/AppDispatcher';
 
 describe('Dispatcher', () => {
   it('should exists', () => {

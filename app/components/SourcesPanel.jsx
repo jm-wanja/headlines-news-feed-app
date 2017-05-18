@@ -2,7 +2,6 @@ import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 import { getNewsArticles } from '../actions/AppActions';
-import SourcesStore from '../stores/SourcesStore';
 
 /**
  * Class  displaying the Search Form.
@@ -40,8 +39,6 @@ class SourcesPanel extends React.Component {
     // console.log('getNewsArticles', value)
     // then action getnewsarticles is dispatched
     getNewsArticles(value);
-    // const sortBy = value.split('?sortBy=');
-    // this.props.setSortBy(sortBy);
   }
 
   /**
@@ -51,13 +48,11 @@ class SourcesPanel extends React.Component {
    */
   mapStateToOptions(sources) { // function that returns an object with options for my form = all sources
     this.sourcesMap = sources;
-    return sources.map(source => {
-      return {
-        value: `${source.id}`,
-        label: source.name,
-        description: source.description,
-      }
-    });
+    return sources.map(source => ({
+      value: `${source.id}`,
+      label: source.name,
+      description: source.description,
+    }));
   }
 
   /**
@@ -65,11 +60,6 @@ class SourcesPanel extends React.Component {
    * @return {*} render the Search Form
    */
   render() {
-
-    // const sourcesComp = this.props.sources.map(source =>
-    //   <Sources key={source.id} data={source} />
-    // )
-
     return (
 
       <div className="">
@@ -88,7 +78,7 @@ class SourcesPanel extends React.Component {
                   options={this.mapStateToOptions(this.props.sources)}
                   value={this.state.currentValue}
                   className="search-bar"
-                  onChange={this.updateSearch} // on change handler 
+                  onChange={this.updateSearch} // on change handler
                   autofocus
                   clearable={this.state.clearable}
                   placeholder="Select News Source" // displayed when there's no value
@@ -99,8 +89,6 @@ class SourcesPanel extends React.Component {
             <p className="center light"> {this.state.sourceDescription}</p>
           </div>
         </div>
-        {/*<div> It should render here </div>
-        <DefaultPage sources={this.props.sources} />*/}
       </div>
     );
   }

@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import expect from 'expect';
-import Header from '../../components/HeaderPanel.js';
+import Header from './../components/HeaderPanel.jsx';
 
-describe('Test Nav component', () => {
+describe('Test Header component', () => {
   const wrapper = shallow(<Header />);
   describe('should have an html element called ', () => {
     it('div', () => {

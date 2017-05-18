@@ -8,7 +8,7 @@ import { getNewsSources } from '../actions/AppActions';
  * Class to hold the main component.
  * @extends React.Component
  */
- class Home extends React.Component {
+class Home extends React.Component {
   /**
    * Set the Initial conditions for Home component
    * @param {*} props - The properties of the Home Class
@@ -28,12 +28,7 @@ import { getNewsSources } from '../actions/AppActions';
     this.unsetWelcome = this.unsetWelcome.bind(this);
     // console.log('Im sure', getNewsSources('abc-news-au'));
   }
-  // componentDidMount(){
-  //   this.setState({
-  //     sources: getNewsSources('abc-news-au','top')
-  //   });
-  //   // let data = getNewsSources('abc-news-au','top');
-  // }
+
   /**
    * Get the initial state from stores
    * @return {*} the current state.
@@ -132,7 +127,7 @@ import { getNewsSources } from '../actions/AppActions';
       </div>
     );
   }
-};
+}
 
- export default Home;
+export default Home;
 

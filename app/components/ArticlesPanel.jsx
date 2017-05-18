@@ -33,10 +33,6 @@ class ArticlesPanel extends React.Component {
     this.getNewSortByValue = this.getNewSortByValue.bind(this);
   }
 
-  // componentDidMount(){
-  //   getNewsArticles('abc-news-au','top');
-  // }
-
   /**
    * Invoked immediately after a component is mounted
    * @return {void} returns the new state and props
@@ -117,7 +113,6 @@ class ArticlesPanel extends React.Component {
       );
       // console.log('welcome', this.props.welcome)
     } else if (this.props.welcome) {
-
       return (
         <DefaultPage sources={this.props.sources} />
       );

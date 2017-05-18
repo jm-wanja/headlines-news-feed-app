@@ -8,10 +8,11 @@ import Sources from './Sources.jsx';
  * @param {*} props - the parent component state values
  * @return {jsx} returns the sources component
  */
+// dummy function
 const DefaultPage = (props) => {
   const sources = props.sources.map(source =>
     <Sources key={source.id} data={source} />
-  )
+  );
 
   return (
     <div className="container">
