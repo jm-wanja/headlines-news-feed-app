@@ -10,7 +10,7 @@ import Select from 'react-select';
 const options = [
   { value: 'top', label: 'Top' },
   { value: 'latest', label: 'Latest' },
-  { value: 'popular', label: 'Popular' }
+  { value: 'popular', label: 'Popular' },
 ];
 
 const ArticlesList = props => (

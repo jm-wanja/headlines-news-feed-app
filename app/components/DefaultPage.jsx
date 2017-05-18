@@ -11,7 +11,7 @@ import Sources from './Sources.jsx';
 // dummy function
 const DefaultPage = (props) => {
   const sources = props.sources.map(source =>
-    <Sources key={source.id} data={source} />
+    <Sources key={source.id} data={source} />,
   );
 
   return (

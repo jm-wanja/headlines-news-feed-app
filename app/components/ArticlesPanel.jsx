@@ -65,7 +65,7 @@ class ArticlesPanel extends React.Component {
   }
 
   /**
-   * Method to set the current Sort value and send request to the News Actions.
+   * Method to set the current Sort value and send request to the App Actions.
    * @param {event} event the change event
    * @returns {*} return the is loading props.
    */
@@ -103,7 +103,7 @@ class ArticlesPanel extends React.Component {
    */
   render() {
     const myArticles = this.state.allItems.map(item =>
-      <Articles key={item.url} data={item} />
+      <Articles key={item.url} data={item} />,
     );
 
     const sortBarOptions = this.getOptions(this.props.sortBy);

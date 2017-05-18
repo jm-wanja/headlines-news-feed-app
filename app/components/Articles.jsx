@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Share from './SocialMedia.jsx';
+import Share from './Share.jsx';
 
 /**
  * @param {props} props - the state properties from the parent class

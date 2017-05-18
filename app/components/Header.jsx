@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//  * @return {*} return the Header component
-// */
+/**
+ * @return {*} render the Header component
+*/
 function Header() {
   return (
       <div className="navbar-fixed">
