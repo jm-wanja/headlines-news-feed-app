@@ -38,7 +38,7 @@ class Home extends React.Component {
   }
 
   /**
-   * Invoked immediately after a component is mounted
+   * Invoked immediately after a component is mounted uses addChangeListener method  from store
    * @return {*} the new state and props
    */
   componentWillMount() {
@@ -47,7 +47,7 @@ class Home extends React.Component {
   }
 
   /**
-   * The method to set the state of the component when there is a change
+   * The method to set the state of the component when there is a change from SourcesStore
    * @return {*} the new state and props
    */
   onChange() {
@@ -81,7 +81,7 @@ class Home extends React.Component {
 
   /**
    * The method for handling change events
-   * @return {object} the list of sources
+   * @return {object} the list of sources from SourcesStore using action  getAll method
    */
   getItemsState() {
     this.getItemsStateNow = '';

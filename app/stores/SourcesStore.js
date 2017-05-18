@@ -27,11 +27,12 @@ class SourceStore extends EventEmitter {
   }
 
   /**
-   * @returns {*} listens for change and emits the data to the view
+   * @returns {*} listens for change and emits the data to Home
    */
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
+
   /**
    * @callback request Callback
    * @param {callback} callback - the callback that handles event changes
@@ -40,6 +41,7 @@ class SourceStore extends EventEmitter {
   addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
   }
+
   /**
    * @callback request Callback
    * @param {callback} callback - the callback that handles event changes
@@ -55,8 +57,8 @@ const SourcesStore = new SourceStore();
 /**
  * @description Method to register with dispatcher
 */
-AppDispatcher.register((payloads) => {
-  switch (payloads.actionType) {
+AppDispatcher.register((payloads) => { // the store is now listening to AppDispatcher
+  switch (payloads.actionType) { // determines whether for a given broadcasts if there's relevant action
     case ActionTypes.GET_NEWS_SOURCES:
     // console.log('getting payload: ', payloads);
       SourcesStore.sources = [...payloads.data];

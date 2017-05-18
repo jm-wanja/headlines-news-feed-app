@@ -1,8 +1,10 @@
 const express = require('express');
 
 // Create new app
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
 const app = express();
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 8080;
 
 app.use((req, res, next) => {
   if (req.headers['x-forwarded-proto'] === 'https') {

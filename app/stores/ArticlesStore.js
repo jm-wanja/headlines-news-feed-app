@@ -1,4 +1,4 @@
-import { EventEmitter } from 'events';
+import { EventEmitter } from 'events'; // allows store to listen and broadcast events
 import AppDispatcher from '../dispatchers/AppDispatcher';
 import ActionTypes from '../constants/ActionTypes.jsx';
 
@@ -70,10 +70,10 @@ const ArticlesStore = new ArticleStore();
 /**
  * @description Method to register with dispatcher
 */
-AppDispatcher.register((payload) => {
-  switch (payload.actionType) {
-    case ActionTypes.GET_NEWS_ARTICLES:
-      ArticlesStore.articles = [...payload.data.articles];
+AppDispatcher.register((payload) => { // registered a callback - store is now listening to Appdispatcher broadcasts
+  switch (payload.actionType) { // determines whether for  given broadcast if there are any relevant actions to take
+    case ActionTypes.GET_NEWS_ARTICLES: // actions can now be handled according to their action type
+      ArticlesStore.articles = [...payload.data.articles]; // spread operator will deconstruct the array an pass each article separately
       ArticlesStore.articlesSource = payload.data.source;
       ArticlesStore.articlesSortBy = payload.data.sortBy;
       ArticlesStore.emitChange();

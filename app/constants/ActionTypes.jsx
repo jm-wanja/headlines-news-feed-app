@@ -1,4 +1,4 @@
-import keyMirror from 'key-mirror';
+import keyMirror from 'key-mirror'; // mirror keys so that value matches our key defination
 
 /**
  * Define action constants
