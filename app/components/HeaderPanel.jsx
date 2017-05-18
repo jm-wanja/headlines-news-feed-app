@@ -30,7 +30,6 @@ class Header extends React.Component {
               </li>
             </ul>
             <a href="/#" data-activates="nav-mobile" className="button-collapse">
-              <i className="material-icons">Menu</i>
             </a>
           </div>
         </nav>
