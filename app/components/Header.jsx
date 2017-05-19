@@ -9,22 +9,9 @@ function Header() {
       <div className="navbar-fixed">
         <nav className="pink" role="navigation">
           <div className="nav-wrapper container">
-            <Link to="/" classID="logo-container" className="brand-logo">
+            <Link to="/" classID="logo-container" className="brand-logo center">
               InTheNow
             </Link>
-            <ul className="right hide-on-med-and-down">
-              <li>
-                <Link to="/logout">Logout</Link>
-              </li>
-            </ul>
-
-            <ul classID="nav-mobile" className="side-nav">
-              <li>
-                <Link to="/logout">Logout</Link>
-              </li>
-            </ul>
-            <a href="/#" data-activates="nav-mobile" className="button-collapse">
-            </a>
           </div>
         </nav>
       </div>

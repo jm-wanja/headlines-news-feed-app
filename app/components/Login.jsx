@@ -35,7 +35,6 @@ class Login extends React.Component {
     this.clientId = clientId;
     const responseGoogle = (response) => {
       user.login(response);
-      document.location.reload();
     };
     return (
             <div>
