@@ -11,7 +11,9 @@ const Articles = props => (
     <div className="col s10 m6">
       <div className="card medium hoverable z-depth-5">
         <div className="card-image">
+          <a target="_blank" href={props.data.url}>
           <img alt={props.data.name} src={props.data.urlToImage} />
+          </a>
         </div>
         <div className="card-content">
           <h6>{props.data.title}</h6>

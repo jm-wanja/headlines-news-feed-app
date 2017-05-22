@@ -4,7 +4,7 @@
   "main": "index.html",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --history-api-fallback ",
     "test": "jest",
     "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls.js && rm -rf ./coverage "
   },

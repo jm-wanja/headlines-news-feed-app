@@ -13,7 +13,7 @@ const options = [
   { value: 'popular', label: 'Popular' },
 ];
 
-const ArticlesList = props => (
+const ArticlesSortBy = props => (
   <div className="section">
     <div className="container">
       <div className="row">
@@ -39,7 +39,7 @@ const ArticlesList = props => (
 /**
  * Set the PropTypes for ArticlesList
  */
-ArticlesList.propTypes = {
+ArticlesSortBy.propTypes = {
   articles: PropTypes.array.isRequired,
   sortOptions: PropTypes.array.isRequired,
   currentSortValue: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ ArticlesList.propTypes = {
   clearable: PropTypes.bool,
 };
 
-export default ArticlesList;
+export default ArticlesSortBy;

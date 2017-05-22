@@ -8,16 +8,6 @@ import user from './UserDetails';
  * @extends React.Component
  */
 class Login extends React.Component {
-//   constructor() {
-//     super();
-//   }
-// store user data in local storage html5
-//   storeUserData(response) {
-//     console.log('id_token', response);
-//     localStorage.setItem('id_token', response.googleId);
-//     console.log(response);
-//     console.log('response id', response.googleId);
-//   }
 
   responseGoogle(googleUser) {
     const idToken = googleUser.getAuthResponse().id_token;
@@ -37,7 +27,7 @@ class Login extends React.Component {
       user.login(response);
     };
     return (
-            <div>
+            <div id="Login">
                 <nav className="pink">
                     <div className="nav-wrapper">
                         <a href="" className="brand-logo center">InTheNow!</a>
@@ -65,7 +55,7 @@ class Login extends React.Component {
                                     scope="profile"
                                     responseHandler={this.responseGoogle}
                                     buttonText="Login With Google+"
-                                    className="btn-large waves-effect waves-light pink lighten-1"
+                                    className="btn-large waves-effect waves-light red lighten-1"
                                 />
                             </div>
                         </div>

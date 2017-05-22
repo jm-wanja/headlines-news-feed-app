@@ -4,6 +4,8 @@ import ActionTypes from '../constants/ActionTypes.jsx';
 
 const CHANGE_EVENT = 'change';
 
+// holds state of the data, public methods are used to retrieve data and set the ap state
+
 /**
  * @class SourceStore
  * @extends {EventEmitter}

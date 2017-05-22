@@ -16,7 +16,7 @@ export function getNewsSources() {
 }
 
   /**
-   * function to fetch news articles an handle sorting.
+   * function to fetch news articles
    * @param {source}source - the news source of the articles
    * @param {option} option - the sort bys that are available
    * @returns {*} - object containing the list of articles via dispatcher

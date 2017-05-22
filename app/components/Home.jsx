@@ -21,12 +21,12 @@ class Home extends React.Component {
       isLoading: false,
       welcome: true,
     };
+
     this.getItemsState = this.getItemsState.bind(this);
     this.onChange = this.onChange.bind(this);
     this.setSortBy = this.setSortBy.bind(this);
     this.setIsLoading = this.setIsLoading.bind(this);
     this.unsetWelcome = this.unsetWelcome.bind(this);
-    // console.log('Im sure', getNewsSources('abc-news-au'));
   }
 
   /**

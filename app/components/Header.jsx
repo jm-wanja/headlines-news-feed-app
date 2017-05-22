@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 /**
  * @return {*} render the Header component
+ * @param {nav} nav header and login
 */
-function Header() {
+function Header(nav) {
   return (
       <div className="navbar-fixed">
         <nav className="pink" role="navigation">
@@ -12,6 +13,11 @@ function Header() {
             <Link to="/" classID="logo-container" className="brand-logo center">
               InTheNow
             </Link>
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <Link to="/login">Login</Link>
+                </li>
+            </ul>
           </div>
         </nav>
       </div>
