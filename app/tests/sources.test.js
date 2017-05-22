@@ -7,7 +7,7 @@ describe('Sources component', () => {
   const wrapper = shallow(<Sources
     key={[
       { id: 'cnn' },
-      { id: 'tchcrunch' }
+      { id: 'techcrunch' }
     ]}
   />);
 
