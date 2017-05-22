@@ -16,13 +16,9 @@
     "env": {
         "node": true,
         "es6": true,
-        "mocha": true,
         "browser": true
     },
     "globals": {
-        "_": true,
-        "io": true,
-        "JQuery": true,
         "$": true,
         "expect": true,
         "should": true
@@ -35,9 +31,6 @@
             {
                 "ignoreComments": true
             }
-        ],
-        "prop-types": [
-            2
         ],
         "one-var": 0,
         "func-names": 0,
