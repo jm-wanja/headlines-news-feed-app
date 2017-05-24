@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/jm-wanja/headlines-news-feed-app/badge.svg?branch=master)](https://coveralls.io/github/jm-wanja/headlines-news-feed-app?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/jm-wanja/headlines-news-feed-app/badge.svg)](https://coveralls.io/github/jm-wanja/headlines-news-feed-app)
 
 # InTheNow
 
