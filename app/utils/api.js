@@ -20,10 +20,11 @@ export function getNewsArticles(source, option, callback) {
   /**
    * function to fetch news sources from the newsapi.
    * @param {*} callback - the callback that handles event changes
+   * @param {*} category - the sources category
    * @returns {*} - object containing the list of news sources
    */
-export function getNewsSources(callback) {
-  const url = `${apiUrl}/sources`;
+export function getNewsSources(callback, category) {
+  const url = `${apiUrl}/sources?${category}&apiKey=${apiKey}`;
   axios.get(url).then(response => callback(response.data.sources))
   .catch(error => error.data);
 }

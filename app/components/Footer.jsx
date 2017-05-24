@@ -2,8 +2,9 @@ import React from 'react';
 
 /**
  * @return {*} render the footer component
+ * @param footer
 */
-function Footer() {
+function Footer(footer) {
   return (
     <footer className="page-footer pink">
     <div className="footer-copyright">

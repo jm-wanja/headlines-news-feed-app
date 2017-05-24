@@ -6,6 +6,6 @@ import Articles from '../components/Articles.jsx';
 describe('Test Article component', () => {
   const wrapper = shallow(<Articles />);
   it('should have a <div> tag', () => {
-    expect(wrapper.node.type).toBe('key={props.data.url}');
+    expect(wrapper.node.props.children.type).toBe('/http/');
   });
 });

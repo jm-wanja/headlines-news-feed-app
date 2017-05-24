@@ -20,7 +20,7 @@ npm test
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+InTheNow is currently deployed on `https://heroku-inthenow.herokuapp.com/`.
 
 ## Built With
 
