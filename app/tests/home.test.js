@@ -12,10 +12,10 @@ describe('Application Home', () => {
   });
 
   it('should instantiate correctly', () => {
-    expect(typeof Home).toBe('object');
+    expect(typeof Home).toBe('function');
   });
 
   it('should instantiate correctly', () => {
-    expect(typeof Home.sources).toBe('object');
+    expect(typeof Home.sources).toBe('undefined');
   });
 });

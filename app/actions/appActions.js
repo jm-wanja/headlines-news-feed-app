@@ -2,17 +2,19 @@ import * as api from '../utils/api';
 import AppDispatcher from '../dispatchers/AppDispatcher';
 import ActionTypes from '../constants/ActionTypes.jsx';
 
+
   /**
    * function to fetch news sources from the newsapi.
+   * @param {*} category - sources category.
    * @returns {*} - object containing the list of news sources via dispatcher
    */
-export function getNewsSources() {
+export function getNewsSources(category) {
   api.getNewsSources((data) => {
     AppDispatcher.dispatch({
       actionType: ActionTypes.GET_NEWS_SOURCES,
       data,
     });
-  });
+  }, category);
 }
 
   /**
@@ -29,3 +31,4 @@ export function getNewsArticles(source, option) {
     });
   });
 }
+

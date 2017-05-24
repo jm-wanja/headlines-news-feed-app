@@ -19,6 +19,7 @@ class SourceStore extends EventEmitter {
     super();
     this.sources = [];
     this.currentSource = '';
+    this.sourceCategory = '';
   }
 
   /**
@@ -26,6 +27,13 @@ class SourceStore extends EventEmitter {
    */
   getAll() {
     return this.sources;
+  }
+
+  /**
+ * @returns {object} returns list of source categories
+ */
+  getSourceCategory() {
+    return this.sourceCategory;
   }
 
   /**
@@ -64,6 +72,7 @@ AppDispatcher.register((payloads) => { // the store is now listening to AppDispa
     case ActionTypes.GET_NEWS_SOURCES:
     // console.log('getting payload: ', payloads);
       SourcesStore.sources = [...payloads.data];
+      SourcesStore.sourceCategory = payloads.data.category;
       SourcesStore.emitChange();
       break;
     default:

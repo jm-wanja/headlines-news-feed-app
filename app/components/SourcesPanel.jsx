@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
-import { getNewsArticles } from '../actions/AppActions';
+import { getNewsArticles } from '../actions/appActions';
 
 /** * Class  displaying the Search
  * @extends React.Component

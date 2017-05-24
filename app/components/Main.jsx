@@ -7,7 +7,7 @@ import Home from './Home.jsx';
 /**
  * @return {*} render the footer component
 */
-function Main() {
+function Main(div) {
   return (
       <div>
         <Header />

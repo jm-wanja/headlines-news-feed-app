@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ArticlesStore from '../stores/ArticlesStore';
-import { getNewsArticles } from '../actions/AppActions';
+import { getNewsArticles } from '../actions/appActions';
 import ArticlesSortBy from './ArticlesSortBy.jsx';
 import Articles from './Articles.jsx';
 import Loading from './Loading.jsx';
