@@ -4,14 +4,15 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './client/index.html',
+  template: './app/index.html',
   filename: 'index.html',
   inject: 'body'
-})
+});
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './app/app.jsx',
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
@@ -24,11 +25,11 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [{
-          loader: "style-loader" // creates style nodes from JS strings
+          loader: 'style-loader' // creates style nodes from JS strings
         }, {
-          loader: "css-loader" // translates CSS into CommonJS
+          loader: 'css-loader' // translates CSS into CommonJS
         }, {
-          loader: "sass-loader" // compiles Sass to CSS
+          loader: 'sass-loader' // compiles Sass to CSS
         }
         ]
       },
@@ -46,4 +47,5 @@ module.exports = {
   plugins: [HtmlWebpackPluginConfig],
 
 
-}
+};
+
