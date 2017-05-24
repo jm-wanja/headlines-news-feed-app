@@ -22,7 +22,6 @@ const Articles = props => (
         <div className="card-action">
           {/* social media buttons*/}
           <Share share={props.data.url} title={props.data.title} />
-          {/* to open article in new social tab*/}
           <a
             className="btn waves-effect waves-light pink"
             target="_blank"

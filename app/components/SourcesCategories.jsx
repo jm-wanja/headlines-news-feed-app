@@ -21,7 +21,7 @@ const SourcesCategories = props => (
             onChange={props.updateSearch}
             placeholder="Sources Categories"
             clearable={props.clearable}
-            style={{ marginTop: '170px' }}
+            style={{ marginTop: '135px' }}
           />
         </div>
         <div className="divider" />

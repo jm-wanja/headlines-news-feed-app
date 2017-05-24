@@ -35,7 +35,6 @@ class SourcesPanel extends React.Component {
       newsSource: `Viewing news from ${event.label}`,
       sourceDescription: event.description,
     });
-    // console.log('getNewsArticles', value)
     // then action getnewsarticles is dispatched
     getNewsArticles(value);
   }
@@ -45,7 +44,7 @@ class SourcesPanel extends React.Component {
    * @param {sources} sources - an array of all the news sources
    * @return {object} return each news source
    */
-  mapStateToOptions(sources) { // function that returns an object with options for my form = all sources
+  mapStateToOptions(sources) {
     this.sourcesMap = sources;
     return sources.map(source => ({
       value: `${source.id}`,

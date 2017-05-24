@@ -4,7 +4,6 @@ import SourcesPanel from './SourcesPanel.jsx';
 import ArticlesPanel from './ArticlesPanel.jsx';
 import { getNewsSources } from '../actions/appActions';
 import SourcesCategories from './SourcesCategories.jsx';
-import Sources from './Sources.jsx';
 
 /**
  * Class to hold the main component.
@@ -71,7 +70,6 @@ class Home extends React.Component {
    * @return {void} returns nothing
    */
   setIsLoading(value) {
-    console.log(value);
     this.setState({
       isLoading: value,
     });
@@ -150,15 +148,15 @@ class Home extends React.Component {
     return (
       <div className="main-component">
         <div className="row">
-          <div className="col s8">
-          <SourcesPanel // view sources
+          <div className="col s10">
+          <SourcesPanel
             sources={this.state.sources}
             setSortBy={this.setSortBy}
             loading={this.state.isLoading}
             setIsLoading={this.setIsLoading}
           />
           </div>
-          <div className="col s4">
+          <div className="col s2">
           <SourcesCategories
             options={options}
             clearable={this.state.clearable}
@@ -167,7 +165,7 @@ class Home extends React.Component {
           />
           </div>
         </div>
-        <ArticlesPanel // view articles
+        <ArticlesPanel
           sources={this.state.sources}
           sortBy={this.state.sortBy}
           isLoading={this.state.isLoading}
