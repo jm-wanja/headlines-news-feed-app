@@ -1,6 +1,5 @@
-import keyMirror from 'key-mirror'; // mirror keys so that value matches our key defination
+import keyMirror from 'key-mirror';
 
-// methods called to send actions to dispatcher
 /**
  * Define action constants
 */

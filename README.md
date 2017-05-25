@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/jm-wanja/headlines-news-feed-app/badge.svg?branch=master)](https://coveralls.io/github/jm-wanja/headlines-news-feed-app?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/jm-wanja/headlines-news-feed-app/badge.svg)](https://coveralls.io/github/jm-wanja/headlines-news-feed-app)
 
 # InTheNow
 
@@ -14,13 +14,14 @@ InTheNow is a newsfeed RSS application that uses NewsAPI to view headlines from 
 4. Run the project: This will start the local server to run your project on. This ensures that you can run the project on your browser of choice. In the terminal/command prompt, enter the following command:
 `npm start`
 Open a web browser of your choice and visit `http://localhost:8080`.
+
 ## Running the tests
 
 npm test
 
 ## Deployment
 
-InTheNow is currently deployed on `https://heroku-inthenow.herokuapp.com/`.
+InTheNow is currently deployed on [heroku] (https://heroku-inthenow.herokuapp.com/).
 
 ## Built With
 

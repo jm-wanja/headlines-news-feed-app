@@ -5,6 +5,8 @@ import Home from './Home.jsx';
 
 
 /**
+ * @param {*} div - returns the children components
+ *
  * @return {*} render the footer component
 */
 function Main(div) {

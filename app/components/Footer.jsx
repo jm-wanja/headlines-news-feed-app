@@ -2,7 +2,8 @@ import React from 'react';
 
 /**
  * @return {*} render the footer component
- * @param footer
+ *
+ * @param {*}footer
 */
 function Footer(footer) {
   return (

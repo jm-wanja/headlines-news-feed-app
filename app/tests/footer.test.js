@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import Footer from './../components/Footer.jsx';
+import Footer from '../components/Footer.jsx';
 
 describe('Test Footer component', () => {
   const wrapper = shallow(<Footer />);

@@ -9,12 +9,15 @@ import DefaultPage from './DefaultPage.jsx';
 
 /**
  * Class to hold the ArticlesPanel component.
+ *
  * @extends React.Component
  */
 class ArticlesPanel extends React.Component {
   /**
    * Set the Initial conditions for showing the News Articles
+   *
    * @param {object} props - The properties of the ArticlesPanel Class
+   *
    */
   constructor(props) {
     super(props);
@@ -103,7 +106,7 @@ class ArticlesPanel extends React.Component {
    */
   render() {
     const myArticles = this.state.allItems.map(item =>
-      <Articles key={item.url} data={item} />,
+      <Articles id="art" key={item.url} data={item} />,
     );
 
     const sortBarOptions = this.getOptions(this.props.sortBy);
@@ -111,14 +114,13 @@ class ArticlesPanel extends React.Component {
       return (
         <Loading />
       );
-      // console.log('welcome', this.props.welcome)
     } else if (this.props.welcome) {
       return (
         <DefaultPage sources={this.props.sources} />
       );
     }
     return (
-      <ArticlesSortBy
+      <ArticlesSortBy className='sort'
         articles={myArticles}
         sortOptions={sortBarOptions}
         clearable={this.state.clearable}

@@ -4,15 +4,15 @@ import ActionTypes from '../constants/ActionTypes.jsx';
 
 const CHANGE_EVENT = 'change';
 
-// holds state of the data, public methods are used to retrieve data and set the ap state
-
 /**
  * @class SourceStore
+ *
  * @extends {EventEmitter}
  */
 class SourceStore extends EventEmitter {
   /**
    * Creates an instance of SourceStore.
+   *
    * @memberof SourceStore
    */
   constructor() {
@@ -45,7 +45,9 @@ class SourceStore extends EventEmitter {
 
   /**
    * @callback request Callback
+   *
    * @param {callback} callback - the callback that handles event changes
+   *
    * @returns {object} add change listener
    */
   addChangeListener(callback) {
@@ -54,7 +56,9 @@ class SourceStore extends EventEmitter {
 
   /**
    * @callback request Callback
+   *
    * @param {callback} callback - the callback that handles event changes
+   *
    * @returns {object} remove change listener
    */
   removeChangeListener(callback) {
@@ -67,10 +71,9 @@ const SourcesStore = new SourceStore();
 /**
  * @description Method to register with dispatcher
 */
-AppDispatcher.register((payloads) => { // the store is now listening to AppDispatcher
-  switch (payloads.actionType) { // determines whether for a given broadcasts if there's relevant action
+AppDispatcher.register((payloads) => {
+  switch (payloads.actionType) {
     case ActionTypes.GET_NEWS_SOURCES:
-    // console.log('getting payload: ', payloads);
       SourcesStore.sources = [...payloads.data];
       SourcesStore.sourceCategory = payloads.data.category;
       SourcesStore.emitChange();

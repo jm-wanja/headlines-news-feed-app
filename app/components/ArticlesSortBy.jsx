@@ -4,6 +4,7 @@ import Select from 'react-select';
 
 /**
  * @param {props} props - the parent state properties
+ *
  * @return {*} return the ArticlesList component
 */
 
