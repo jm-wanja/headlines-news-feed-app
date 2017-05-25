@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import DefaultPage from './../components/DefaultPage.jsx';
+import DefaultPage from '../components/DefaultPage.jsx';
 
 describe('DefaultPage Component with news sources', () => {
   const wrapper = shallow(<DefaultPage

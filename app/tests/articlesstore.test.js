@@ -1,7 +1,7 @@
 import expect from 'expect';
-import ArticlesStore from './../stores/ArticlesStore';
-import Dispatcher from './../dispatchers/AppDispatcher';
-import ActionTypes from './../constants/ActionTypes.jsx';
+import ArticlesStore from '../stores/ArticlesStore';
+import Dispatcher from '../dispatchers/AppDispatcher';
+import ActionTypes from '../constants/ActionTypes.jsx';
 import { fetchedArticles } from './testdata.jsx';
 
 describe('Application Article store', () => {

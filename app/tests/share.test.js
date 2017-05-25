@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import Share from './../components/Share.jsx';
+import Share from '../components/Share.jsx';
 
 const props = {
   share: '',

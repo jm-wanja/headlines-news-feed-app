@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import Header from './../components/Header.jsx';
+import Header from '../components/Header.jsx';
 
 describe('Test Header component', () => {
   const wrapper = shallow(<Header />);

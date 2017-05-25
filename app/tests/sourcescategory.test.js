@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import SourcesCategory from './../components/SourcesCategories.jsx';
+import SourcesCategory from '../components/SourcesCategories.jsx';
 
 const props = {
   options: [],

@@ -1,7 +1,7 @@
 import expect from 'expect';
-import SourcesStore from './../stores/SourcesStore';
-import Dispatcher from './../dispatchers/AppDispatcher';
-import ActionTypes from './../constants/ActionTypes.jsx';
+import SourcesStore from '../stores/SourcesStore';
+import Dispatcher from '../dispatchers/AppDispatcher';
+import ActionTypes from '../constants/ActionTypes.jsx';
 import { fetchedSources } from './testdata.jsx';
 
 describe('Application Source store', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import Sources from './../components/Sources.jsx';
+import Sources from '../components/Sources.jsx';
 
 describe('Sources component', () => {
   const wrapper = shallow(<Sources

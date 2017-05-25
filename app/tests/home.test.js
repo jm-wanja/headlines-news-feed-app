@@ -1,9 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
-import Home from './../components/Home.jsx';
-// import Dispatcher from './../dispatchers/AppDispatcher';
-// import ActionTypes from './../constants/ActionTypes.jsx';
+import Home from '../components/Home.jsx';
 
 describe('Application Home', () => {
   const wrapper = shallow(<Home
