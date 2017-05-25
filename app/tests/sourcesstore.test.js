@@ -2,6 +2,7 @@ import expect from 'expect';
 import SourcesStore from './../stores/SourcesStore';
 import Dispatcher from './../dispatchers/AppDispatcher';
 import ActionTypes from './../constants/ActionTypes.jsx';
+import { fetchedSources } from './testdata.jsx';
 
 describe('Application Source store', () => {
   const sources = [];
@@ -56,10 +57,10 @@ describe('Application Source store', () => {
   it('should receive some fetched sources from Dispatcher', () => {
     Dispatcher.dispatch({
       actionType: ActionTypes.GET_NEWS_SOURCES,
-      data: sources
+      data: fetchedSources
     });
     const actual = SourcesStore.getAll();
-    const expected = sources;
+    const expected = fetchedSources;
     expect(actual).toEqual(expected);
   });
 

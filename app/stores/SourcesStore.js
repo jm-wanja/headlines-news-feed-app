@@ -67,8 +67,8 @@ const SourcesStore = new SourceStore();
 /**
  * @description Method to register with dispatcher
 */
-AppDispatcher.register((payloads) => { // the store is now listening to AppDispatcher
-  switch (payloads.actionType) { // determines whether for a given broadcasts if there's relevant action
+AppDispatcher.register((payloads) => {
+  switch (payloads.actionType) {
     case ActionTypes.GET_NEWS_SOURCES:
     // console.log('getting payload: ', payloads);
       SourcesStore.sources = [...payloads.data];

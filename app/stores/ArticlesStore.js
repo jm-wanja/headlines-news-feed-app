@@ -1,4 +1,4 @@
-import { EventEmitter } from 'events'; // allows store to listen and broadcast events
+import { EventEmitter } from 'events';
 import AppDispatcher from '../dispatchers/AppDispatcher';
 import ActionTypes from '../constants/ActionTypes.jsx';
 

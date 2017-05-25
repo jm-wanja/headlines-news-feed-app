@@ -59,7 +59,6 @@ class SourcesPanel extends React.Component {
    */
   render() {
     return (
-
       <div className="">
         <div className="section no-pad-bot">
           <div className="container">

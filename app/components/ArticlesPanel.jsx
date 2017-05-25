@@ -103,7 +103,7 @@ class ArticlesPanel extends React.Component {
    */
   render() {
     const myArticles = this.state.allItems.map(item =>
-      <Articles key={item.url} data={item} />,
+      <Articles id="art" key={item.url} data={item} />,
     );
 
     const sortBarOptions = this.getOptions(this.props.sortBy);
@@ -111,14 +111,13 @@ class ArticlesPanel extends React.Component {
       return (
         <Loading />
       );
-      // console.log('welcome', this.props.welcome)
     } else if (this.props.welcome) {
       return (
         <DefaultPage sources={this.props.sources} />
       );
     }
     return (
-      <ArticlesSortBy
+      <ArticlesSortBy className='sort'
         articles={myArticles}
         sortOptions={sortBarOptions}
         clearable={this.state.clearable}
