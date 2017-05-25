@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoogleLogin } from 'react-google-login-component';
-// import { hashHistory } from 'react-router';
 import user from './UserDetails';
 
 /**
@@ -18,6 +17,7 @@ class Login extends React.Component {
 
   /**
    * Display the login Component
+   *
    * @return {jsx} render the login Content
    */
   render() {

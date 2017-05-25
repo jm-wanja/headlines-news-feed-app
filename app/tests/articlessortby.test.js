@@ -12,7 +12,7 @@ const props = {
 
 };
 
-describe('Articles component', () => {
+describe('ArticlesSortBy component', () => {
   const wrapper = shallow(<ArticlesSortBy {...props}
   />);
 

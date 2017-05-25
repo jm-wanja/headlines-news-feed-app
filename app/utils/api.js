@@ -5,9 +5,11 @@ const apiKey = '213327409d384371851777e7c7f78dfe';
 
   /**
    * class to fetch news articles and handle sorting.
+   *
    * @param {*} source - the news source
    * @param {*} option - the sortBy
    *  @param {*} callback - the callback that handles event changes
+   *
    * @returns {*} - object containing the list of articles based on sources
    */
 export function getNewsArticles(source, option, callback) {
@@ -19,8 +21,10 @@ export function getNewsArticles(source, option, callback) {
 
   /**
    * function to fetch news sources from the newsapi.
+   *
    * @param {*} callback - the callback that handles event changes
    * @param {*} category - the sources category
+   *
    * @returns {*} - object containing the list of news sources
    */
 export function getNewsSources(callback, category) {

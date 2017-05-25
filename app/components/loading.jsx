@@ -2,8 +2,11 @@ import React from 'react';
 
 /**
  * Class to display the loading component.
+ *
  * @extends React.Component
+ *
  * @param {*} div - renders the loading circle.
+ *
  * @return {*} return the loader.
  */
 const Loading = div => (

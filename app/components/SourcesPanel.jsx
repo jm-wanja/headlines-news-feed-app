@@ -4,12 +4,15 @@ import PropTypes from 'prop-types';
 import { getNewsArticles } from '../actions/appActions';
 
 /** * Class  displaying the Search
+ *
  * @extends React.Component
  */
 class SourcesPanel extends React.Component {
   /**
    * Returns the value in the Search Field
+   *
    * @param {object} props - The properties of the News Sources Class
+   *
    */
   constructor(props) {
     super(props);
@@ -22,9 +25,12 @@ class SourcesPanel extends React.Component {
   }
 
   /**
-   * Method to set the currently selected news source,
+   * Method to set the currently selected news source.
+   *
    * Method to send request to the App Actions.
+   *
    * @param {event} event - the select-box change event
+   *
    * @return {*} return the new state and props
    */
   updateSearch(event) {
@@ -41,7 +47,9 @@ class SourcesPanel extends React.Component {
 
   /**
    * Method to generate the options for the Search box.
+   *
    * @param {sources} sources - an array of all the news sources
+   *
    * @return {object} return each news source
    */
   mapStateToOptions(sources) {
@@ -55,6 +63,7 @@ class SourcesPanel extends React.Component {
 
   /**
    * Renders the Search Input
+   *
    * @return {*} render the Search Form
    */
   render() {
@@ -75,10 +84,10 @@ class SourcesPanel extends React.Component {
                   options={this.mapStateToOptions(this.props.sources)}
                   value={this.state.currentValue}
                   className="search-bar"
-                  onChange={this.updateSearch} // on change handler
+                  onChange={this.updateSearch}
                   autofocus
                   clearable={this.state.clearable}
-                  placeholder="Select News Source" // displayed when there's no value
+                  placeholder="Select News Source"
                 />
               </div>
             </div>

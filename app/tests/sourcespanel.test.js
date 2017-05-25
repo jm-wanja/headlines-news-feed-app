@@ -10,7 +10,7 @@ const props = {
 
 };
 
-describe('DefaultPage Component with news sources', () => {
+describe('SourcesPanel Component', () => {
   const wrapper = shallow(<SourcesPanel {...props}
   />);
 

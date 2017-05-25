@@ -4,6 +4,7 @@ import Share from './Share.jsx';
 
 /**
  * @param {props} props - the state properties from the parent class
+ *
  * @return {*} return the Articles component
 */
 const Articles = props => (

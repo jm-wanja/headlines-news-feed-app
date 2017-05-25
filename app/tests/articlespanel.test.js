@@ -1,4 +1,3 @@
-// import TestUtils from 'react-addons-test-utils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import expect from 'expect';
@@ -25,11 +24,3 @@ describe('Test ArticlePanel component', () => {
     expect(wrapper.find('.sort')).toExist();
   });
 });
-
-  // sources: PropTypes.array,
-  // sortBy: PropTypes.array.isRequired,
-  // isLoading: PropTypes.bool,
-  // welcome: PropTypes.bool,
-  // setIsLoading: PropTypes.func.isRequired,
-  // unsetWelcome: PropTypes.func.isRequired,
-

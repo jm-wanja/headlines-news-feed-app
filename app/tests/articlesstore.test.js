@@ -64,16 +64,6 @@ describe('Application Article store', () => {
     expect(actual).toEqual(expected);
   });
 
-  // it('should return empty array when an invalid article is searched', () => {
-  //   Dispatcher.dispatch({
-  //     actionType: ActionTypes.GET_NEWS_ARTICLES,
-  //     data: ''
-  //   });
-  //   const actual = ArticlesStore.getAll();
-  //   const expected = [];
-  //   expect(actual).toEqual(expected);
-  // });
-
   it('should have an emit function', () => {
     expect(typeof ArticlesStore.emit).toBe('function');
   });

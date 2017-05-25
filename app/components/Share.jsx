@@ -22,12 +22,14 @@ const LinkedinIcon = generateShareIcon('linkedin');
 
 /**
  * Class to display the share component.
+ *
  * @extends React.Component
  */
 class Share extends React.Component {
 
   /**
    * Method to render the share buttons.
+   *
    * @returns {jsx} renders the share buttons
    */
   render() {

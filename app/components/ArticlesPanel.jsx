@@ -9,12 +9,15 @@ import DefaultPage from './DefaultPage.jsx';
 
 /**
  * Class to hold the ArticlesPanel component.
+ *
  * @extends React.Component
  */
 class ArticlesPanel extends React.Component {
   /**
    * Set the Initial conditions for showing the News Articles
+   *
    * @param {object} props - The properties of the ArticlesPanel Class
+   *
    */
   constructor(props) {
     super(props);

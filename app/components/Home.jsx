@@ -7,11 +7,13 @@ import SourcesCategories from './SourcesCategories.jsx';
 
 /**
  * Class to hold the main component.
+ *
  * @extends React.Component
  */
 class Home extends React.Component {
   /**
    * Set the Initial conditions for Home component
+   *
    * @param {*} props - The properties of the Home Class
    */
   constructor(props) {

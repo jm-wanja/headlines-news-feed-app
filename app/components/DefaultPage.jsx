@@ -4,8 +4,11 @@ import Sources from './Sources.jsx';
 
 /**
  * Class to display the sources component.
+ *
  * @extends React.Component
+ *
  * @param {*} props - the parent component state values
+ *
  * @return {jsx} returns the sources component
  */
 const DefaultPage = (props) => {

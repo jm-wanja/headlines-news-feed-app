@@ -8,9 +8,6 @@ import Home from './../components/Home.jsx';
 describe('Application Home', () => {
   const wrapper = shallow(<Home
   />);
-  // const sources = [];
-  // const sortby = []
-  const currentFilterValue = ''
 
   it('should exists', () => {
     expect(Home).toExist();

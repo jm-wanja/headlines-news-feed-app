@@ -7,6 +7,7 @@ import Login from './components/Login.jsx';
 
 /**
  * Render the Routes of the News Page
+ *
  * @return {Page} the routes of the page
  */
 ReactDOM.render(

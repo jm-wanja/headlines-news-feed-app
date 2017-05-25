@@ -11,7 +11,7 @@ const props = {
 
 };
 
-describe('Test Loading component', () => {
+describe('Test SourcesCategory component', () => {
   const wrapper = shallow(<SourcesCategory {...props} />);
 
   describe('should have an html element called ', () => {
